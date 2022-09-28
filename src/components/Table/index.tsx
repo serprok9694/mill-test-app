@@ -30,7 +30,7 @@ export const Table = () => {
 					</div>
 				)) : null}
 			</div>
-			<AddEmployeeBlock addEmployee={onAddEmployee} />
+			<AddEmployeeBlock addEmployee={onAddEmployee} employeesTotal={employees.length} />
 		</>
 	);
 };
