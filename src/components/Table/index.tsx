@@ -4,8 +4,7 @@ import { TableRow } from "../TableRow";
 import { AddEmployeeBlock } from "../AddEmployeeBlock";
 
 export const Table = () => {
-	const storageEmployees = JSON.parse(localStorage.getItem("employees") as string);
-	const [employees, setEmployees] = useState<IEmployee[]>(storageEmployees);
+	const [employees, setEmployees] = useState<IEmployee[]>(JSON.parse(localStorage.getItem("employees") as string));
 
 	const onAddEmployee = (newEmployee: IEmployee) => {
 		const updatedEmployees = [...employees, newEmployee];
