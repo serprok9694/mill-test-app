@@ -13,7 +13,7 @@ export const AddEmployeeBlock = (props: IAddEmployeeBlockProps) => {
 	const [warningMessage, setWarningMessage] = useState<boolean>(false);
 
 	const addEmployee = () => {
-		if (name.length || surname.length) {
+		if (name.length && surname.length) {
 			const newEmployee = { name, surname, id: `${Math.floor(Math.random() * 10000)}_${surname}_${name}` };
 			props.addEmployee(newEmployee);
 			warningMessage && setWarningMessage(false);
